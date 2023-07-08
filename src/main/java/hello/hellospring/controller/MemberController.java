@@ -19,6 +19,8 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        // AOP 적용 후 실제 Proxy가 주입되는 지 확인
+        // System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
